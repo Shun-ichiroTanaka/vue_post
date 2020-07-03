@@ -29577,6 +29577,91 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
+.register-form :root {
+  --brandColor: hsl(166, 67%, 51%);
+  --background: rgb(247, 247, 247);
+  --textDark: hsla(0, 0%, 0%, 0.66);
+  --textLight: hsla(0, 0%, 0%, 0.33);
+}
+
+.register-form body {
+  background: var(--background);
+  height: 100vh;
+  color: var(--textDark);
+}
+
+.register-form .field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.register-form .register {
+  margin-top: 10rem;
+  background: white;
+  border-radius: 10px;
+}
+
+.register-form .left,
+.register-form .right {
+  padding: 4.5rem;
+}
+
+.register-form .left {
+  border-right: 5px solid var(--background);
+}
+
+.register-form .left .title {
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.register-form .left .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+  letter-spacing: -1px;
+}
+
+.register-form .left p {
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.register-form .right .title {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.register-form .right .description {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+  color: var(--textLight);
+  font-size: 1.15rem;
+}
+
+.register-form .right small {
+  color: var(--textLight);
+}
+
+.register-form input {
+  font-size: 1rem;
+}
+
+.register-form input:focus {
+  border-color: var(--brandColor) !important;
+  box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.register-form .fab,
+.register-form .fas {
+  color: var(--textLight);
+  margin-right: 1rem;
+}
+
+.register-form .va {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 640px){
   .sm\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse: 0;
