@@ -18,8 +18,13 @@
   </footer>
 </template>
 <script>
+import Toggle from "../../../components/object/button/Toggle";
+
 export default {
   name: "FooterNav",
+  components: {
+    Toggle
+  },
   props: ["mode"]
 };
 </script>
@@ -27,5 +32,12 @@ export default {
 .footer {
   margin-top: 10vh;
   padding: 2rem 1.5rem;
+  background: #f8fafc;
+}
+.dark {
+  footer {
+    background: #1a202c;
+    box-shadow: 1px 0 0 0 rgb(255, 255, 255, 0.8);
+  }
 }
 </style>

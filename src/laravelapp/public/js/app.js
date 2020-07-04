@@ -1953,6 +1953,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/object/button/Toggle */ "./resources/js/components/object/button/Toggle.vue");
 //
 //
 //
@@ -1972,8 +1973,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "FooterNav",
+  components: {
+    Toggle: _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   props: ["mode"]
 });
 
@@ -2226,77 +2231,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2362,7 +2296,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".footer[data-v-285a2d84] {\n  margin-top: 10vh;\n  padding: 2rem 1.5rem;\n}", ""]);
+exports.push([module.i, ".footer[data-v-285a2d84] {\n  margin-top: 10vh;\n  padding: 2rem 1.5rem;\n  background: #f8fafc;\n}\n.dark footer[data-v-285a2d84] {\n  background: #1a202c;\n  box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.8);\n}", ""]);
 
 // exports
 
@@ -23958,127 +23892,12 @@ var render = function() {
         on: { toggle: _vm.toggle }
       }),
       _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
       _c("footer-nav", { attrs: { mode: _vm.mode } })
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "columns body-columns" }, [
-      _c("div", { staticClass: "column is-half is-offset-one-quarter" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "header" }, [
-            _c("div", { staticClass: "media" }, [
-              _c("div", { staticClass: "media-left" }, [
-                _c("figure", { staticClass: "image is-48x48" }, [
-                  _c("img", {
-                    attrs: {
-                      src: "https://source.unsplash.com/random/96x96",
-                      alt: "Placeholder image"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "media-content" }, [
-                _c("p", { staticClass: "title is-4" }, [_vm._v("John Smith")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "subtitle is-6" }, [
-                  _vm._v("@johnsmith")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-image" }, [
-            _c("figure", { staticClass: "image is-4by3" }, [
-              _c("img", {
-                attrs: {
-                  src: "https://source.unsplash.com/random/1280x960",
-                  alt: "Placeholder image"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-content" }, [
-            _c("div", { staticClass: "level is-mobile" }, [
-              _c("div", { staticClass: "level-left" }, [
-                _c("div", { staticClass: "level-item has-text-centered" }, [
-                  _c("a", { attrs: { href: "" } }, [
-                    _c("i", { staticClass: "material-icons" }, [
-                      _vm._v("favorite_border")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "level-item has-text-centered" }, [
-                  _c("div", [
-                    _c("a", { attrs: { href: "" } }, [
-                      _c("i", { staticClass: "material-icons" }, [
-                        _vm._v("chat_bubble_outline")
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "content" }, [
-              _c("p", [_c("strong", [_vm._v("32 Likes")])]),
-              _vm._v(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing\n            elit. Phasellus nec iaculis mauris.\n            "
-              ),
-              _c("a", [_vm._v("@bulmaio")]),
-              _vm._v(".\n            "),
-              _c("a", { attrs: { href: "#" } }, [_vm._v("#css")]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "#" } }, [_vm._v("#responsive")]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("time", { attrs: { datetime: "2018-1-1" } }, [
-                _vm._v("11:09 PM - 1 Jan 2018")
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-footer" }, [
-            _c("div", { staticClass: "columns is-mobile" }, [
-              _c("div", { staticClass: "column is-11" }, [
-                _c("div", { staticClass: "field" }, [
-                  _c("div", { staticClass: "control" }, [
-                    _c("input", {
-                      staticClass: "input is-medium",
-                      attrs: {
-                        type: "text",
-                        placeholder: "Add a comment . . ."
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "column has-text-centered" }, [
-                _c("button", { staticClass: "button" }, [
-                  _c("i", { staticClass: "material-icons" }, [
-                    _vm._v("more_horiz")
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
