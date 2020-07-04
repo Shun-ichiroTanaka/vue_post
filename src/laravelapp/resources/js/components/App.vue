@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -15,7 +13,7 @@ export default {
 </script>
 <style lang="scss">
 .dark {
-  background: #192734;
+  background: #1a202c;
   color: #e8e8e8;
 }
 </style>

@@ -37,7 +37,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #15202b;
+  background: #1a202c;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -50,15 +50,15 @@ export default {
   left: 4px;
   bottom: 4px;
   background: #fff;
-  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s ease;
   transition: 0.4s;
 }
 
 input:checked + .toggler {
-  background: #2196f3;
+  background: #38b2ac;
 }
 input:focus + toggler {
-  box-shadow: 0 0 2px #2196f3;
+  box-shadow: 0 0 2px #38b2ac;
 }
 
 input:checked + .toggler:before {
