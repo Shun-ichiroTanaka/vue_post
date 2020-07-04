@@ -58,22 +58,4 @@ nav.navbar {
   background: #1a202c;
   box-shadow: 0 0 1px 0 rgb(255, 255, 255, 0.8);
 }
-
-/**
- * Toggle component
- */
-[role="button"] ~ [data-menu-list] {
-  display: none;
-}
-[role="button"]:checked ~ [data-menu-list] {
-  display: block;
-}
-
-/* !! change focus style with Tailwind utilities !! */
-[role="button"] + label {
-  border: 2px solid transparent;
-}
-[role="button"]:focus + label {
-  border: 2px solid white;
-}
 </style>

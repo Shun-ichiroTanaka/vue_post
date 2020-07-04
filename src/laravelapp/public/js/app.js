@@ -2381,7 +2381,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "nav.navbar[data-v-0ed3457e] {\n  height: 6rem;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n}\n.navbar-brand[data-v-0ed3457e] {\n  align-items: center !important;\n}\n.dark nav.navbar[data-v-0ed3457e] {\n  background: #1a202c;\n  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.8);\n}\n\n/**\n * Toggle component\n */\n[role=button] ~ [data-menu-list][data-v-0ed3457e] {\n  display: none;\n}\n[role=button]:checked ~ [data-menu-list][data-v-0ed3457e] {\n  display: block;\n}\n\n/* !! change focus style with Tailwind utilities !! */\n[role=button] + label[data-v-0ed3457e] {\n  border: 2px solid transparent;\n}\n[role=button]:focus + label[data-v-0ed3457e] {\n  border: 2px solid white;\n}", ""]);
+exports.push([module.i, "nav.navbar[data-v-0ed3457e] {\n  height: 6rem;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n}\n.navbar-brand[data-v-0ed3457e] {\n  align-items: center !important;\n}\n.dark nav.navbar[data-v-0ed3457e] {\n  background: #1a202c;\n  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.8);\n}", ""]);
 
 // exports
 
@@ -2400,7 +2400,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n\n/* enter、 leave アニメーションで異なる間隔やタイミング関数を利用することができます */\n.anime-enter-active[data-v-e0a1ccf8] {\n  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1) !important;\n}\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1) !important;\n}\n.anime-enter[data-v-e0a1ccf8], .slide-fade-leave-to[data-v-e0a1ccf8] {\n  transform: translateY(-20px);\n  opacity: 0;\n}", ""]);
+exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.1s ease-in-out;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(-12px);\n}", ""]);
 
 // exports
 
@@ -23697,7 +23697,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
+                      "profile max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
                   },
                   [
                     _c(

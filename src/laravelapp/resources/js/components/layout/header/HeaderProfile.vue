@@ -19,7 +19,7 @@
         <div v-if="show">
           <!-- menu -->
           <div
-            class="max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
+            class="profile max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
             　
           >
             <!-- header -->
@@ -103,16 +103,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-/* enter、 leave アニメーションで異なる間隔やタイミング関数を利用することができます */
-.anime-enter-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1) !important;
+.profile {
+  margin-top: 30px;
 }
+.anime-enter-active,
 .anime-leave-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1) !important;
+  transition: all 0.1s ease-in-out;
 }
-.anime-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-20px);
+.anime-enter,
+.dropdown-fade-leave-to {
   opacity: 0;
+  transform: translateY(-12px);
 }
 </style>
