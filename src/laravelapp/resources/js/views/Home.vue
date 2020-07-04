@@ -77,8 +77,8 @@
   </div>
 </template>
 <script>
-import HeaderNav from "../components/layout/HeaderNav";
-import FooterNav from "../components/layout/FooterNav";
+import HeaderNav from "../components/layout/header/HeaderNav";
+import FooterNav from "../components/layout/footer/FooterNav";
 
 export default {
   name: "Home",

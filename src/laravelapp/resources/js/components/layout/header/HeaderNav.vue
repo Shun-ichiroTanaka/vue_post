@@ -11,14 +11,14 @@
           <!-- スマホメニュー -->
           <sp-drawer></sp-drawer>
         </div>
+
         <div id="navbarMenu" class="navbar-menu">
           <div class="navbar-end">
             <!-- ダークモード切替 -->
             <div class="flex items-center justify-center">
               <toggle :mode="mode" @toggle="$emit('toggle')"></toggle>
             </div>
-
-            <a class="navbar-item is-size-5 has-text-weight-semibold">Examples</a>
+            <header-profile></header-profile>
           </div>
         </div>
       </div>
@@ -27,19 +27,21 @@
   </div>
 </template>
 <script>
-import Toggle from "../../components/object/button/Toggle";
-import SpDrawer from "../../components/layout/SpDrawer";
+import Toggle from "../../../components/object/button/Toggle";
+import SpDrawer from "../../../components/layout/header/SpDrawer";
+import HeaderProfile from "../../../components/layout/header/HeaderProfile";
 
 export default {
   name: "HeaderNav",
   data() {
     return {
-      logo: require("../../../assets/bulma.png")
+      logo: require("../../../../assets/bulma.png")
     };
   },
   components: {
     Toggle,
-    SpDrawer
+    SpDrawer,
+    HeaderProfile
   },
   props: ["mode"]
 };
@@ -55,5 +57,23 @@ nav.navbar {
 .dark nav.navbar {
   background: #1a202c;
   box-shadow: 0 0 1px 0 rgb(255, 255, 255, 0.8);
+}
+
+/**
+ * Toggle component
+ */
+[role="button"] ~ [data-menu-list] {
+  display: none;
+}
+[role="button"]:checked ~ [data-menu-list] {
+  display: block;
+}
+
+/* !! change focus style with Tailwind utilities !! */
+[role="button"] + label {
+  border: 2px solid transparent;
+}
+[role="button"]:focus + label {
+  border: 2px solid white;
 }
 </style>
