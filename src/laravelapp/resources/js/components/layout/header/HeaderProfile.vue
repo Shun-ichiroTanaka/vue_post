@@ -72,7 +72,7 @@
               <li>
                 <a
                   class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
+                  href="/logout"
                 >Logout</a>
               </li>
             </ul>

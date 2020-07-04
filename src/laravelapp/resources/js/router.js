@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from "./views/Home";
-// import Logout from "./Actions/Logout";
+import Logout from "./Actions/Logout";
 
 Vue.use(VueRouter);
 
@@ -23,8 +23,10 @@ export default new VueRouter({
         //     meta: {
         //         title: 'プロフィール'
         //     }
-        // },{
-        //     path: '/logout', component: Logout
         // }
+        , {
+            path: '/logout',
+            component: Logout
+        }
     ]
 });
