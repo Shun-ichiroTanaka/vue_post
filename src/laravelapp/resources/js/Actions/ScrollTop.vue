@@ -1,7 +1,7 @@
 <template>
   <div @click="toTop" class="w-full h-full cursor-pointer">
     <transition name="anime">
-      <div id="pagetop" class="fixed" v-show="scY != 0">
+      <div id="pagetop" class="fixed" v-show="scY > 300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
