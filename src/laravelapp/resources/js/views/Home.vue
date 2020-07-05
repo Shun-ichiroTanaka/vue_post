@@ -2,18 +2,31 @@
   <div class="home" :class="mode">
     <header-nav :mode="mode" @toggle="toggle"></header-nav>
 
+    <post-lists></post-lists>
+
+    <scroll-top></scroll-top>
+
     <footer-nav :mode="mode"></footer-nav>
   </div>
 </template>
+
 <script>
+// 投稿情報をvuexで取得
+import { mapGetters } from "vuex";
+import PostLists from "../components/layout/main/post/PostLists";
+
 import HeaderNav from "../components/layout/header/HeaderNav";
 import FooterNav from "../components/layout/footer/FooterNav";
+
+import ScrollTop from "../Actions/ScrollTop";
 
 export default {
   name: "Home",
   components: {
+    PostLists,
     HeaderNav,
-    FooterNav
+    FooterNav,
+    ScrollTop
   },
   data() {
     return {
@@ -22,6 +35,9 @@ export default {
   },
   created() {
     window.addEventListener("keyup", this.keyPress);
+  },
+  mounted() {
+    this.$store.dispatch("fetchNewsPosts");
   },
   methods: {
     keyPress(e) {
@@ -36,6 +52,12 @@ export default {
         this.mode = "dark";
       }
     }
+  },
+  computed: {
+    ...mapGetters({
+      posts: "posts",
+      newsStatus: "newsStatus"
+    })
   }
 };
 </script>
