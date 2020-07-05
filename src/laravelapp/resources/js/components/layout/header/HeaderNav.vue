@@ -3,7 +3,7 @@
     <!-- START NAV -->
     <nav class="navbar">
       <div class="container h-full">
-        <div class="navbar-brand h-full md:justify-between px-0 md:px-4">
+        <div class="navbar-brand h-full justify-between px-4">
           <a class="navbar-item" href="/">
             <img :src="logo" alt="Logo" />
           </a>
