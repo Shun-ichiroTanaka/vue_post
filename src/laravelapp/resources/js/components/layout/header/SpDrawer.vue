@@ -31,7 +31,7 @@ export default {};
   max-width: 90%;
   height: 100%;
   background: #fff;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
   transform: translateX(100%);
 }
 #drawer-checkbox:checked ~ #drawer-content {
@@ -49,7 +49,7 @@ export default {};
   height: 100%;
   background: #000;
   opacity: 0;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 }
 #drawer-checkbox:checked ~ #drawer-close {
   display: block;
