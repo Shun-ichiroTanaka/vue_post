@@ -108,11 +108,11 @@ export default {
 }
 .anime-enter-active,
 .anime-leave-active {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.5s ease;
 }
 .anime-enter,
 .dropdown-fade-leave-to {
   opacity: 0;
-  transform: translateY(-12px);
+  transform: translateY(-30px);
 }
 </style>
