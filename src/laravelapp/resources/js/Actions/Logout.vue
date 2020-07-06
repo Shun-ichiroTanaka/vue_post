@@ -1,4 +1,8 @@
-<template></template>
+<template>
+  <div>
+    <p>ログインページに戻ります...</p>
+  </div>
+</template>
 
 <script>
 export default {
