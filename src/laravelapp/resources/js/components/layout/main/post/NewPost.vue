@@ -1,7 +1,11 @@
 <template>
-    <div class="relative new-post">
+    <div class="relative new-post mr-4">
         <div class="new-post-btn">
-            <button class="btn ripple rounded-full w-12 h-12"></button>
+            <button
+                class="btn ripple shadow rounded-full w-12 h-12 text-4xl flex justify-center items-center"
+            >
+                +
+            </button>
         </div>
     </div>
 </template>
@@ -51,22 +55,23 @@ export default {
 <style lang="scss">
 .new-post {
     &-btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-    .custom-class {
-        right: 5px;
-        bottom: 5px;
+        // position: absolute;
+        // right: 0;
+        // bottom: 0;
     }
     .btn {
         border: none;
         user-select: none;
         outline: none;
-        padding: 10px 25px;
-        color: #ffffff;
-        background: #4fc3f7;
+        color: #181a1b;
+        background: #e4e6eb;
         text-align: center;
+        padding-bottom: 7px;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+        &:hover {
+            background: #d0d2d8;
+        }
     }
     .ripple {
         position: relative;
@@ -79,8 +84,8 @@ export default {
         background: #fff;
         border-radius: 50%;
         transform: scale(0);
-        animation: ripple 0.8s;
-        opacity: 0.3;
+        animation: ripple 0.6s;
+        opacity: 0.8;
     }
 
     @keyframes ripple {
