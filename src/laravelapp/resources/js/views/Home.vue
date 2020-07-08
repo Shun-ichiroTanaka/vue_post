@@ -3,7 +3,6 @@
         <header-nav :mode="mode" @toggle="toggle"></header-nav>
 
         <post-lists></post-lists>
-        <new-post></new-post>
 
         <scroll-top></scroll-top>
 
@@ -15,7 +14,6 @@
 // 投稿情報をvuexで取得
 import { mapGetters } from "vuex";
 import PostLists from "../components/layout/main/post/PostLists";
-import NewPost from "../components/layout/main/post/NewPost";
 
 import HeaderNav from "../components/layout/header/HeaderNav";
 import FooterNav from "../components/layout/footer/FooterNav";
@@ -28,8 +26,7 @@ export default {
         PostLists,
         HeaderNav,
         FooterNav,
-        ScrollTop,
-        NewPost
+        ScrollTop
     },
     data() {
         return {
