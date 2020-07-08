@@ -35,38 +35,7 @@
                 <a
                   class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
                   href="#"
-                >Profile & Visibility</a>
-              </li>
-              <li>
-                <a
-                  class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
-                >Activity</a>
-              </li>
-              <li>
-                <a
-                  class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
                 >Settings</a>
-              </li>
-              <li class="m-2 border-b"></li>
-              <li>
-                <a
-                  class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
-                >Help</a>
-              </li>
-              <li>
-                <a
-                  class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
-                >Shortcuts</a>
-              </li>
-              <li>
-                <a
-                  class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
-                  href="#"
-                >Change language</a>
               </li>
               <li class="m-2 border-b"></li>
               <li>
@@ -108,7 +77,7 @@ export default {
 }
 .anime-enter-active,
 .anime-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 .anime-enter,
 .dropdown-fade-leave-to {
