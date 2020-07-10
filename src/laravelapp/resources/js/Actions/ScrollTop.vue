@@ -4,8 +4,8 @@
       <div id="pagetop" class="fixed" v-show="scY > 300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="48"
-          height="48"
+          width="50"
+          height="50"
           viewBox="0 0 24 24"
           fill="none"
           stroke="#4a5568"
@@ -56,7 +56,7 @@ export default {
   display: block;
   -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
-  bottom: 30px;
+  bottom: 100px;
   right: 30px;
   z-index: 1000;
 }
