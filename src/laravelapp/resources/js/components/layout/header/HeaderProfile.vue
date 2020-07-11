@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div :mode="mode" class="relative">
         <div
             class="flex items-center justify-center ml-8 h-full"
             @mouseover="mouseover"
@@ -22,15 +22,15 @@
                 <div v-if="show">
                     <!-- menu -->
                     <div
-                        class="profile max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
+                        class="profile max-w-xs absolute right-0 text-sm rounded shadow z-50"
                         　
                     >
                         <!-- header -->
                         <div
-                            class="relative flex justify-center items-center border-b mx-3"
+                            class="relative flex justify-center items-center mx-3"
                         >
                             <div
-                                class="flex items-center justify-start py-2 text-gray-700 font-bold tracking-wide whitespace-no-wrap"
+                                class="flex items-center justify-start py-2 font-bold tracking-wide whitespace-no-wrap"
                             >
                                 <div
                                     class="mr-2 my-1 inline-flex items-center h-10 w-10 select-none border-2 border-white rounded-full shadow-inner overflow-hidden"
@@ -48,15 +48,14 @@
                         <ul class="my-2">
                             <li>
                                 <a
-                                    class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
+                                    class="block px-3 py-2 focus:outline-none focus:bg-gray-200"
                                     href="#"
                                     >Settings</a
                                 >
                             </li>
-                            <li class="m-2 border-b"></li>
                             <li>
                                 <a
-                                    class="block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200"
+                                    class="block px-3 py-2 focus:outline-none focus:bg-gray-200"
                                     href="/logout"
                                     >Logout</a
                                 >
@@ -70,6 +69,8 @@
     </div>
 </template>
 <script>
+import Toggle from "../../../components/object/button/Toggle";
+
 export default {
     name: "HeaderProfile",
 
@@ -78,6 +79,10 @@ export default {
             show: false
         };
     },
+    components: {
+        Toggle
+    },
+    props: ["mode"],
     methods: {
         mouseover() {
             this.show = true;
@@ -94,6 +99,7 @@ export default {
 .profile {
     margin-top: 30px;
     width: 400px;
+    background: $white;
 }
 .anime-enter-active,
 .anime-leave-active {
@@ -103,5 +109,14 @@ export default {
 .dropdown-fade-leave-to {
     opacity: 0;
     transform: translateY(10px);
+}
+
+.dark {
+    .profile {
+        background: $secondary-black;
+        a {
+            color: $white;
+        }
+    }
 }
 </style>

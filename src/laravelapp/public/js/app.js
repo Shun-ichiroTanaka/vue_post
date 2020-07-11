@@ -2214,6 +2214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/object/button/Toggle */ "./resources/js/components/object/button/Toggle.vue");
 //
 //
 //
@@ -2284,7 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "HeaderProfile",
   data: function data() {
@@ -2292,6 +2293,10 @@ __webpack_require__.r(__webpack_exports__);
       show: false
     };
   },
+  components: {
+    Toggle: _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: ["mode"],
   methods: {
     mouseover: function mouseover() {
       this.show = true;
@@ -3250,7 +3255,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}", ""]);
+exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n  background: #f8fafc;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}\n.dark .profile[data-v-e0a1ccf8] {\n  background: #242627;\n}\n.dark .profile a[data-v-e0a1ccf8] {\n  color: #f8fafc;\n}", ""]);
 
 // exports
 
@@ -39213,7 +39218,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative" }, [
+  return _c("div", { staticClass: "relative", attrs: { mode: _vm.mode } }, [
     _c(
       "div",
       {
@@ -39230,21 +39235,21 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "profile max-w-xs absolute right-0 text-sm text-gray-800 bg-white rounded-sm shadow-lg z-50"
+                      "profile max-w-xs absolute right-0 text-sm rounded shadow z-50"
                   },
                   [
                     _c(
                       "div",
                       {
                         staticClass:
-                          "relative flex justify-center items-center border-b mx-3"
+                          "relative flex justify-center items-center mx-3"
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "flex items-center justify-start py-2 text-gray-700 font-bold tracking-wide whitespace-no-wrap"
+                              "flex items-center justify-start py-2 font-bold tracking-wide whitespace-no-wrap"
                           },
                           [
                             _c(
@@ -39276,21 +39281,19 @@ var render = function() {
                           "a",
                           {
                             staticClass:
-                              "block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200",
+                              "block px-3 py-2 focus:outline-none focus:bg-gray-200",
                             attrs: { href: "#" }
                           },
                           [_vm._v("Settings")]
                         )
                       ]),
                       _vm._v(" "),
-                      _c("li", { staticClass: "m-2 border-b" }),
-                      _vm._v(" "),
                       _c("li", [
                         _c(
                           "a",
                           {
                             staticClass:
-                              "block px-3 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-200",
+                              "block px-3 py-2 focus:outline-none focus:bg-gray-200",
                             attrs: { href: "/logout" }
                           },
                           [_vm._v("Logout")]
@@ -40757,7 +40760,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "bg-primary w-full h-50 p-2 text-white rounded focus:outline-none",
+                      "text-xl bg-primary w-full h-50 p-2 text-white rounded focus:outline-none",
                     attrs: { type: "submit" }
                   },
                   [_vm._v("\n                    投稿する\n                ")]

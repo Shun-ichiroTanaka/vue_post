@@ -38,7 +38,7 @@
                 <div class="p-2 w-full h-full">
                     <button
                         type="submit"
-                        class="bg-primary w-full h-50 p-2 text-white rounded focus:outline-none"
+                        class="text-xl bg-primary w-full h-50 p-2 text-white rounded focus:outline-none"
                     >
                         投稿する
                     </button>
