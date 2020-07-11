@@ -4,9 +4,24 @@
       <new-post></new-post>
     </div>
     <new-post-body v-model="modal1">
-      <div class="contents" :mode="mode">
-        <h1>MyModal1</h1>
-        <button @click="closeModal1">閉じる</button>
+      <div class="contents flex flex-col" :mode="mode">
+        <div class="p-2">
+          <h2 class="text-2xl text-center pb-2 border-b">投稿を作成</h2>
+          <button @click="closeModal1" class="close-btn border rounded-full p-1">
+            <x-icon size="1.5x" class="custom-class"></x-icon>
+          </button>
+        </div>
+        <div class="p-2 w-full h-full">
+          <textarea
+            name
+            id
+            placeholder="今日の幸せな出来事をシェアしよう"
+            class="w-full h-full resize-none text-xl p-4"
+          ></textarea>
+        </div>
+        <div class="p-2 w-full h-full">
+          <button type="submit" class="bg-primary w-full h-50 p-2 text-white rounded">投稿する</button>
+        </div>
       </div>
     </new-post-body>
 
@@ -28,6 +43,9 @@ import NewPostBody from "../components/layout/main/post/NewPostBody";
 
 import ScrollTop from "../Actions/ScrollTop";
 
+// icon
+import { XIcon } from "vue-feather-icons";
+
 export default {
   name: "Home",
   components: {
@@ -35,7 +53,8 @@ export default {
     PostLists,
     ScrollTop,
     NewPost,
-    NewPostBody
+    NewPostBody,
+    XIcon
   },
   props: ["mode"],
   data() {
@@ -109,12 +128,25 @@ export default {
     -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
   }
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  textarea {
+    height: 300px;
+  }
 }
 .dark {
   .home {
     .contents {
       color: #fff;
       background: #242627;
+    }
+    textarea {
+      height: 300px;
+      background: #242627;
+      color: #fff;
     }
   }
 }
