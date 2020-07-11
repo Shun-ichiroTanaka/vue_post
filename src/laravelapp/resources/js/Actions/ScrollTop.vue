@@ -56,9 +56,9 @@ export default {
   display: block;
   -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
-  bottom: 100px;
+  bottom: 170px;
   right: 30px;
-  z-index: 1000;
+  z-index: 100;
 }
 .anime-enter-active,
 .anime-leave-active {

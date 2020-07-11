@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from "./views/Home";
+import UserShow from "./views/UserShow";
 import Logout from "./Actions/Logout";
 
 Vue.use(VueRouter);
@@ -16,15 +17,14 @@ export default new VueRouter({
             //     title: 'ホーム'
             // }
         },
-        // {
-        //     path: '/users/:userId',
-        //     name: 'user.show',
-        //     component: UserShow,
-        //     meta: {
-        //         title: 'プロフィール'
-        //     }
-        // }
-        , {
+        {
+            path: '/users',
+            name: 'user.show',
+            component: UserShow,
+            meta: {
+                title: 'プロフィール'
+            }
+        }, {
             path: '/logout',
             component: Logout
         }
