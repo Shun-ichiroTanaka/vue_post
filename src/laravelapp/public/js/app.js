@@ -1995,6 +1995,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/object/button/Toggle */ "./resources/js/components/object/button/Toggle.vue");
+/* harmony import */ var vue_feather_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-feather-icons */ "./node_modules/vue-feather-icons/dist/vue-feather-icons.es.js");
 //
 //
 //
@@ -2008,14 +2010,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ScrollTop",
   data: function data() {
@@ -2024,6 +2020,11 @@ __webpack_require__.r(__webpack_exports__);
       scY: 0
     };
   },
+  components: {
+    Toggle: _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ChevronUpIcon: vue_feather_icons__WEBPACK_IMPORTED_MODULE_1__["ChevronUpIcon"]
+  },
+  props: ["mode"],
   mounted: function mounted() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -2341,6 +2342,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../components/object/button/Toggle */ "./resources/js/components/object/button/Toggle.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -3169,7 +3174,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#pagetop[data-v-38b7eae8] {\n  background: #fff;\n  border-radius: 8px;\n  display: block;\n  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);\n  bottom: 170px;\n  right: 30px;\n  z-index: 100;\n}\n.anime-enter-active[data-v-38b7eae8],\n.anime-leave-active[data-v-38b7eae8] {\n  transition: all 0.5s ease;\n}\n.anime-enter[data-v-38b7eae8],\n.dropdown-fade-leave-to[data-v-38b7eae8] {\n  opacity: 0;\n  transform: translateY(-30px);\n}", ""]);
+exports.push([module.i, "#pagetop[data-v-38b7eae8] {\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;\n  bottom: 170px;\n  right: 30px;\n  z-index: 100;\n  width: 50px;\n  height: 50px;\n  background: #e4e6eb;\n  color: #181a1b;\n}\n#pagetop[data-v-38b7eae8]:hover {\n  background: #dbdee7;\n}\n.anime-enter-active[data-v-38b7eae8],\n.anime-leave-active[data-v-38b7eae8] {\n  transition: all 0.5s ease;\n}\n.anime-enter[data-v-38b7eae8],\n.dropdown-fade-leave-to[data-v-38b7eae8] {\n  opacity: 0;\n  transform: translateY(-30px);\n}\n.dark #pagetop[data-v-38b7eae8] {\n  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);\n  color: #f8fafc;\n  background: #3a3b3d;\n}\n.dark #pagetop[data-v-38b7eae8]:hover {\n  background: #46484b;\n}", ""]);
 
 // exports
 
@@ -3283,7 +3288,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".new-post .btn {\n  width: 50px;\n  height: 50px;\n  font-size: 35px;\n  font-weight: 300;\n  border: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  outline: none;\n  color: #181a1b;\n  background: #e4e6eb;\n  padding-bottom: 7px;\n  text-align: center;\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;\n}\n.new-post .btn:hover {\n  background: #d0d2d8;\n}\n.new-post .ripple {\n  position: relative;\n  overflow: hidden;\n}\n.new-post .ripple .ripple-active {\n  position: absolute;\n  pointer-events: none;\n  background: #e4e6eb;\n  border-radius: 50%;\n  transform: scale(0);\n  -webkit-animation: ripple 0.5s;\n          animation: ripple 0.5s;\n  opacity: 0.8;\n}\n@-webkit-keyframes ripple {\nto {\n    opacity: 0;\n    transform: scale(2);\n}\n}\n@keyframes ripple {\nto {\n    opacity: 0;\n    transform: scale(2);\n}\n}\n.dark .new-post .btn {\n  color: #f8fafc;\n  background: #3a3c3d;\n}\n.dark .new-post .btn:hover {\n  background: #46484b;\n}\n.dark .new-post .ripple .ripple-active {\n  pointer-events: none;\n  background: #f8fafc;\n  opacity: 0.3;\n}", ""]);
+exports.push([module.i, ".new-post .btn {\n  width: 50px;\n  height: 50px;\n  font-size: 35px;\n  font-weight: 300;\n  border: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  outline: none;\n  color: #181a1b;\n  background: #e4e6eb;\n  padding-bottom: 7px;\n  text-align: center;\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;\n}\n.new-post .btn:hover {\n  background: #dbdee7;\n}\n.new-post .ripple {\n  position: relative;\n  overflow: hidden;\n}\n.new-post .ripple .ripple-active {\n  position: absolute;\n  pointer-events: none;\n  background: #e4e6eb;\n  border-radius: 50%;\n  transform: scale(0);\n  -webkit-animation: ripple 0.5s;\n          animation: ripple 0.5s;\n  opacity: 0.8;\n}\n@-webkit-keyframes ripple {\nto {\n    opacity: 0;\n    transform: scale(2);\n}\n}\n@keyframes ripple {\nto {\n    opacity: 0;\n    transform: scale(2);\n}\n}\n.dark .new-post .btn {\n  color: #f8fafc;\n  background: #3a3b3d;\n}\n.dark .new-post .btn:hover {\n  background: #46484b;\n}\n.dark .new-post .ripple .ripple-active {\n  pointer-events: none;\n  background: #f8fafc;\n  opacity: 0.3;\n}", ""]);
 
 // exports
 
@@ -38986,7 +38991,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "w-full h-full cursor-pointer", on: { click: _vm.toTop } },
+    {
+      staticClass: "w-full h-full cursor-pointer",
+      attrs: { mode: _vm.mode },
+      on: { click: _vm.toTop }
+    },
     [
       _c("transition", { attrs: { name: "anime" } }, [
         _c(
@@ -39000,28 +39009,12 @@ var render = function() {
                 expression: "scY > 300"
               }
             ],
-            staticClass: "fixed",
+            staticClass:
+              "fixed rounded-full shaodw flex items-center justify-center",
             attrs: { id: "pagetop" }
           },
-          [
-            _c(
-              "svg",
-              {
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "50",
-                  height: "50",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  stroke: "#4a5568",
-                  "stroke-width": "1",
-                  "stroke-linecap": "square",
-                  "stroke-linejoin": "arcs"
-                }
-              },
-              [_c("path", { attrs: { d: "M18 15l-6-6-6 6" } })]
-            )
-          ]
+          [_c("chevron-up-icon", { attrs: { size: "2.5x" } })],
+          1
         )
       ])
     ],
@@ -39434,7 +39427,7 @@ var staticRenderFns = [
           staticClass:
             "btn ripple shadow rounded-full flex justify-center items-center"
         },
-        [_vm._v("+")]
+        [_vm._v("\n            +\n        ")]
       )
     ])
   }
