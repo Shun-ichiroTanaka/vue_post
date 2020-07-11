@@ -2215,6 +2215,15 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/object/button/Toggle */ "./resources/js/components/object/button/Toggle.vue");
+/* harmony import */ var vue_feather_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-feather-icons */ "./node_modules/vue-feather-icons/dist/vue-feather-icons.es.js");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2286,6 +2295,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "HeaderProfile",
   data: function data() {
@@ -2294,7 +2305,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   components: {
-    Toggle: _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Toggle: _components_object_button_Toggle__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LogOutIcon: vue_feather_icons__WEBPACK_IMPORTED_MODULE_1__["LogOutIcon"],
+    SettingsIcon: vue_feather_icons__WEBPACK_IMPORTED_MODULE_1__["SettingsIcon"]
   },
   props: ["mode"],
   methods: {
@@ -3255,7 +3268,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n  background: #f8fafc;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}\n.dark .profile[data-v-e0a1ccf8] {\n  background: #242627;\n}\n.dark .profile a[data-v-e0a1ccf8] {\n  color: #f8fafc;\n}", ""]);
+exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n  background: #f8fafc;\n}\n.profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #e4e6eb;\n}\n.profile li a[data-v-e0a1ccf8] {\n  color: #181a1b;\n}\n.profile li[data-v-e0a1ccf8]:hover {\n  background: #e4e6eb;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}\n.dark .profile[data-v-e0a1ccf8] {\n  background: #242627;\n}\n.dark .profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #46484b;\n}\n.dark .profile a[data-v-e0a1ccf8] {\n  color: #f8fafc;\n}\n.dark .profile li[data-v-e0a1ccf8]:hover {\n  background: #46484b;\n}", ""]);
 
 // exports
 
@@ -39242,7 +39255,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "relative flex justify-center items-center mx-3"
+                          "profile-header relative flex justify-start items-center mx-3 px-2"
                       },
                       [
                         _c(
@@ -39275,28 +39288,44 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _c("ul", { staticClass: "my-2" }, [
-                      _c("li", [
+                    _c("ul", { staticClass: "p-2" }, [
+                      _c("li", { staticClass: "p-2 rounded-lg" }, [
                         _c(
                           "a",
                           {
                             staticClass:
-                              "block px-3 py-2 focus:outline-none focus:bg-gray-200",
+                              "flex p-2 focus:outline-none focus:bg-gray-200",
                             attrs: { href: "#" }
                           },
-                          [_vm._v("Settings")]
+                          [
+                            _c("settings-icon", {
+                              staticClass: "mr-4",
+                              attrs: { size: "1.5x" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("各種設定")])
+                          ],
+                          1
                         )
                       ]),
                       _vm._v(" "),
-                      _c("li", [
+                      _c("li", { staticClass: "p-2 rounded-lg" }, [
                         _c(
                           "a",
                           {
                             staticClass:
-                              "block px-3 py-2 focus:outline-none focus:bg-gray-200",
+                              "flex p-2 focus:outline-none focus:bg-gray-200",
                             attrs: { href: "/logout" }
                           },
-                          [_vm._v("Logout")]
+                          [
+                            _c("log-out-icon", {
+                              staticClass: "mr-4",
+                              attrs: { size: "1.5x" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("ログアウト")])
+                          ],
+                          1
                         )
                       ])
                     ])

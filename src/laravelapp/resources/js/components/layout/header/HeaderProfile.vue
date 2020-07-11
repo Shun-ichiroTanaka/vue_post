@@ -27,7 +27,7 @@
                     >
                         <!-- header -->
                         <div
-                            class="relative flex justify-center items-center mx-3"
+                            class="profile-header relative flex justify-start items-center mx-3 px-2"
                         >
                             <div
                                 class="flex items-center justify-start py-2 font-bold tracking-wide whitespace-no-wrap"
@@ -45,20 +45,28 @@
                         </div>
 
                         <!-- menu list -->
-                        <ul class="my-2">
-                            <li>
+                        <ul class="p-2">
+                            <li class="p-2 rounded-lg">
                                 <a
-                                    class="block px-3 py-2 focus:outline-none focus:bg-gray-200"
+                                    class="flex p-2 focus:outline-none focus:bg-gray-200"
                                     href="#"
-                                    >Settings</a
-                                >
+                                    ><settings-icon
+                                        size="1.5x"
+                                        class="mr-4"
+                                    ></settings-icon>
+                                    <p>各種設定</p>
+                                </a>
                             </li>
-                            <li>
+                            <li class="p-2 rounded-lg">
                                 <a
-                                    class="block px-3 py-2 focus:outline-none focus:bg-gray-200"
+                                    class="flex p-2 focus:outline-none focus:bg-gray-200"
                                     href="/logout"
-                                    >Logout</a
-                                >
+                                    ><log-out-icon
+                                        size="1.5x"
+                                        class="mr-4"
+                                    ></log-out-icon>
+                                    <p>ログアウト</p>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -70,6 +78,8 @@
 </template>
 <script>
 import Toggle from "../../../components/object/button/Toggle";
+import { LogOutIcon } from "vue-feather-icons";
+import { SettingsIcon } from "vue-feather-icons";
 
 export default {
     name: "HeaderProfile",
@@ -80,7 +90,9 @@ export default {
         };
     },
     components: {
-        Toggle
+        Toggle,
+        LogOutIcon,
+        SettingsIcon
     },
     props: ["mode"],
     methods: {
@@ -100,6 +112,18 @@ export default {
     margin-top: 30px;
     width: 400px;
     background: $white;
+    &-header {
+        border-bottom: 1px solid $gray;
+    }
+
+    li {
+        a {
+            color: $black;
+        }
+        &:hover {
+            background: $btn-white;
+        }
+    }
 }
 .anime-enter-active,
 .anime-leave-active {
@@ -114,8 +138,16 @@ export default {
 .dark {
     .profile {
         background: $secondary-black;
+        &-header {
+            border-bottom: 1px solid $btn-gray-hover;
+        }
         a {
             color: $white;
+        }
+        li {
+            &:hover {
+                background: $btn-gray-hover;
+            }
         }
     }
 }
