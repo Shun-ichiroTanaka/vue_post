@@ -1,7 +1,7 @@
 module.exports = {
     theme: {
         backgroundColor: theme => ({
-            'primary': '#38b2ac',
+            'primary': '#1B76F2',
             'secondary': '#ffed4a',
             'danger': '#e3342f',
 
