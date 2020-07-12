@@ -6,7 +6,7 @@
                 class="fixed rounded-full shaodw flex items-center justify-center"
                 v-show="scY > 300"
             >
-                <chevron-up-icon size="2.5x" class=""></chevron-up-icon>
+                <chevron-up-icon size="2x" class=""></chevron-up-icon>
             </div>
         </transition>
     </div>

@@ -2294,6 +2294,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3268,7 +3275,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n  background: #f8fafc;\n}\n.profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #e4e6eb;\n}\n.profile li a[data-v-e0a1ccf8] {\n  color: #181a1b;\n}\n.profile li[data-v-e0a1ccf8]:hover {\n  background: #e4e6eb;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}\n.dark .profile[data-v-e0a1ccf8] {\n  background: #242627;\n}\n.dark .profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #46484b;\n}\n.dark .profile a[data-v-e0a1ccf8] {\n  color: #f8fafc;\n}\n.dark .profile li[data-v-e0a1ccf8]:hover {\n  background: #46484b;\n}", ""]);
+exports.push([module.i, ".profile[data-v-e0a1ccf8] {\n  margin-top: 30px;\n  width: 400px;\n  background: #f8fafc;\n}\n.profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #e4e6eb;\n}\n.profile-header[data-v-e0a1ccf8]:hover {\n  background: #e4e6eb;\n}\n.profile li a[data-v-e0a1ccf8] {\n  color: #181a1b;\n}\n.profile li[data-v-e0a1ccf8]:hover {\n  background: #e4e6eb;\n}\n.anime-enter-active[data-v-e0a1ccf8],\n.anime-leave-active[data-v-e0a1ccf8] {\n  transition: all 0.3s ease;\n}\n.anime-enter[data-v-e0a1ccf8],\n.dropdown-fade-leave-to[data-v-e0a1ccf8] {\n  opacity: 0;\n  transform: translateY(10px);\n}\n.dark .profile[data-v-e0a1ccf8] {\n  background: #242627;\n}\n.dark .profile-header[data-v-e0a1ccf8] {\n  border-bottom: 1px solid #46484b;\n}\n.dark .profile-header[data-v-e0a1ccf8]:hover {\n  background: #46484b;\n}\n.dark .profile a[data-v-e0a1ccf8] {\n  color: #f8fafc;\n}\n.dark .profile li[data-v-e0a1ccf8]:hover {\n  background: #46484b;\n}", ""]);
 
 // exports
 
@@ -39031,7 +39038,7 @@ var render = function() {
               "fixed rounded-full shaodw flex items-center justify-center",
             attrs: { id: "pagetop" }
           },
-          [_c("chevron-up-icon", { attrs: { size: "2.5x" } })],
+          [_c("chevron-up-icon", { attrs: { size: "2x" } })],
           1
         )
       ])
@@ -39255,14 +39262,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "profile-header relative flex justify-start items-center mx-3 px-2"
+                          "profile-header relative flex justify-start items-center m-3 rounded-lg"
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "flex items-center justify-start py-2 font-bold tracking-wide whitespace-no-wrap"
+                              "flex items-center justify-start p-2 font-bold tracking-wide whitespace-no-wrap cursor-pointer"
                           },
                           [
                             _c(
@@ -39282,13 +39289,29 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
-                            _c("div", {}, [_vm._v("Your Name")])
+                            _c("div", { staticClass: "flex flex-col" }, [
+                              _vm._v(
+                                "\n                                Your Name\n                                "
+                              ),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "text-xs font-normal inline-flex items-center"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                    自分のプロフィールを見る\n                                "
+                                  )
+                                ]
+                              )
+                            ])
                           ]
                         )
                       ]
                     ),
                     _vm._v(" "),
-                    _c("ul", { staticClass: "p-2" }, [
+                    _c("ul", { staticClass: "px-2 pb-2" }, [
                       _c("li", { staticClass: "p-2 rounded-lg" }, [
                         _c(
                           "a",

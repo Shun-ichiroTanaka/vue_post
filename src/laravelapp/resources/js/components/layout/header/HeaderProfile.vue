@@ -27,10 +27,10 @@
                     >
                         <!-- header -->
                         <div
-                            class="profile-header relative flex justify-start items-center mx-3 px-2"
+                            class="profile-header relative flex justify-start items-center m-3 rounded-lg"
                         >
                             <div
-                                class="flex items-center justify-start py-2 font-bold tracking-wide whitespace-no-wrap"
+                                class="flex items-center justify-start p-2 font-bold tracking-wide whitespace-no-wrap cursor-pointer"
                             >
                                 <div
                                     class="mr-2 my-1 inline-flex items-center h-10 w-10 select-none border-2 border-white rounded-full shadow-inner overflow-hidden"
@@ -40,12 +40,19 @@
                                         alt
                                     />
                                 </div>
-                                <div class>Your Name</div>
+                                <div class="flex flex-col">
+                                    Your Name
+                                    <div
+                                        class="text-xs font-normal inline-flex items-center"
+                                    >
+                                        自分のプロフィールを見る
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- menu list -->
-                        <ul class="p-2">
+                        <ul class="px-2 pb-2">
                             <li class="p-2 rounded-lg">
                                 <a
                                     class="flex p-2 focus:outline-none focus:bg-gray-200"
@@ -114,6 +121,9 @@ export default {
     background: $white;
     &-header {
         border-bottom: 1px solid $gray;
+        &:hover {
+            background: $btn-white;
+        }
     }
 
     li {
@@ -140,6 +150,9 @@ export default {
         background: $secondary-black;
         &-header {
             border-bottom: 1px solid $btn-gray-hover;
+            &:hover {
+                background: $btn-gray-hover;
+            }
         }
         a {
             color: $white;
