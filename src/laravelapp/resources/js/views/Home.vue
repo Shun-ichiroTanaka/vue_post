@@ -1,10 +1,36 @@
 <template>
-    <div class="home relative">
+    <div class="home relative p-4 w-full" :mode="mode">
         <div @click="openModal1" class="new-post-modal">
             <new-post></new-post>
         </div>
+
+        <div class="w-full flex justify-center items-center">
+            <div
+                @click="openModal1"
+                class="btn-shadow w-1/3 aaa rounded-lg mt-24 flex justify-center"
+            >
+                <div class="flex justify-between items-center p-3 w-full">
+                    <img
+                        src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+                        alt
+                        class="absolute w-6 h-6 rounded-full object-cover"
+                    />
+                    <input
+                        type="text"
+                        placeholder="最新情報を投稿"
+                        class="pl-8 w-full h-full resize-none focus:outline-none text-sm"
+                    />
+                    <div
+                        class="ml-4 rounded-full p-2 flex justify-center items-center cursor-pointer"
+                    >
+                        <camera-icon size="20" class="text-gray"></camera-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <new-post-body v-model="modal1">
-            <div class="contents flex flex-col p-2" :mode="mode">
+            <div class="contents flex flex-col p-2">
                 <div class="p-2">
                     <h2 class="text-xl bold text-center pb-2">
                         投稿を作成
@@ -38,7 +64,7 @@
                 <div class="p-2 w-full h-full">
                     <button
                         type="submit"
-                        class="text-xl bg-primary w-full h-50 p-2 text-white rounded focus:outline-none"
+                        class="text-lg bg-primary w-full h-50 p-2 text-white rounded focus:outline-none"
                     >
                         投稿する
                     </button>
@@ -66,6 +92,7 @@ import ScrollTop from "../Actions/ScrollTop";
 
 // icon
 import { XIcon } from "vue-feather-icons";
+import { CameraIcon } from "vue-feather-icons";
 
 export default {
     name: "Home",
@@ -75,7 +102,9 @@ export default {
         ScrollTop,
         NewPost,
         NewPostBody,
-        XIcon
+        // icon
+        XIcon,
+        CameraIcon
     },
     props: ["mode"],
     data() {
@@ -162,11 +191,17 @@ export default {
             background: $btn-hover-white;
         }
     }
+    .aaa,
+    input {
+        background: $white !important;
+    }
+
     textarea {
+        background: $white !important;
         height: 300px;
-        background: $white;
     }
 }
+
 .dark {
     .home {
         .contents {
@@ -184,10 +219,14 @@ export default {
                 background: $btn-gray-hover;
             }
         }
+        .aaa,
+        input,
+        textarea {
+            background: $secondary-black !important;
+            color: $white !important;
+        }
         textarea {
             height: 300px;
-            background: $secondary-black;
-            color: $white;
         }
     }
 }

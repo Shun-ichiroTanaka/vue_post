@@ -1,5 +1,5 @@
 <template>
-    <div class :class="mode">
+    <div class="box-border" :class="mode">
         <header-nav :mode="mode" @toggle="toggle"></header-nav>
 
         <div class="overflow-y-screen">
@@ -44,6 +44,8 @@ export default {
 
 body {
     background: $bg-white;
+    box-sizing: border-box !important;
+    clear: both !important;
 }
 
 .dark {

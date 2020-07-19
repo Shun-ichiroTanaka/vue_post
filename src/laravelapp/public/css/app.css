@@ -28097,6 +28097,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background: #f0f2f6;
 }
 
+.btn-shadow {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
 .dark .btn {
   background: #181a1b;
 }

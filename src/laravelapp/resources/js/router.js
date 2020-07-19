@@ -21,9 +21,9 @@ export default new VueRouter({
             path: '/users',
             name: 'user.show',
             component: UserShow,
-            meta: {
-                title: 'プロフィール'
-            }
+            // meta: {
+            //     title: 'プロフィール'
+            // }
         }, {
             path: '/logout',
             component: Logout
