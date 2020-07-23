@@ -2692,16 +2692,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 // 投稿情報をvuexで取得
 
 
@@ -2727,7 +2717,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   props: ["mode"],
   data: function data() {
     return {
-      modal1: false
+      modal1: false,
+      itemNameText: "",
+      error: null
     };
   },
   mounted: function mounted() {
@@ -2743,6 +2735,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     closeModal1: function closeModal1() {
       this.modal1 = false;
+    },
+    add: function add(event) {
+      var _this = this;
+
+      axios.post("/api/posts/store", {
+        item_name: this.itemNameText
+      }).then(function (res) {
+        if (res.data.stats == 0) {
+          _this.$router.push({
+            path: "/",
+            query: {
+              message: res.data.message
+            }
+          });
+        } else {
+          _this.error = res.data.message.item_name.join("<br>");
+        }
+      });
     }
   }
 });
@@ -39588,7 +39598,7 @@ var render = function() {
           _c("div", { staticClass: "contents flex flex-col p-2" }, [
             _c("div", { staticClass: "p-2" }, [
               _c("h2", { staticClass: "text-xl bold text-center pb-2" }, [
-                _vm._v("\n                    投稿を作成\n                ")
+                _vm._v("投稿を作成")
               ]),
               _vm._v(" "),
               _c(
@@ -39629,13 +39639,31 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 w-full h-full" }, [
+              _c("p", [_vm._v(_vm._s(_vm.error))]),
+              _vm._v(" "),
               _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.itemNameText,
+                    expression: "itemNameText"
+                  }
+                ],
                 staticClass:
                   "w-full h-full resize-none text-xl p-4 focus:outline-none",
                 attrs: {
-                  name: "",
                   id: "",
                   placeholder: "今日の幸せな出来事をシェアしよう"
+                },
+                domProps: { value: _vm.itemNameText },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.itemNameText = $event.target.value
+                  }
                 }
               })
             ]),
@@ -39646,9 +39674,9 @@ var render = function() {
                 {
                   staticClass:
                     "text-lg bg-primary w-full h-50 p-2 text-white rounded focus:outline-none",
-                  attrs: { type: "submit" }
+                  attrs: { click: _vm.add, type: "button" }
                 },
-                [_vm._v("\n                    投稿する\n                ")]
+                [_vm._v("投稿する")]
               )
             ])
           ])
