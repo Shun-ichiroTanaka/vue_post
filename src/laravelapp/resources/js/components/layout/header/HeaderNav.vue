@@ -5,8 +5,7 @@
       <div class="container h-full">
         <div class="navbar-brand h-full justify-between px-4">
           <a class="navbar-item" href="/">
-            <!-- <img :src="logo" alt="Logo" /> -->
-            <h1 class="text-3xl font-bold">WeeklyReport</h1>
+            <img :src="logo" alt="Logo" />
           </a>
 
           <!-- スマホメニュー -->

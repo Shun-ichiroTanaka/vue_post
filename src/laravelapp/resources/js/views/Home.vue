@@ -54,7 +54,6 @@
         </div>
         <div class="p-2 w-full h-full">
           <button
-            :click="add"
             type="button"
             class="text-lg bg-primary w-full h-50 p-2 text-white rounded focus:outline-none"
           >投稿する</button>
@@ -62,7 +61,8 @@
       </div>
     </new-post-body>
 
-    <post-lists></post-lists>
+    <p v-if="loading">Loading posts...</p>
+    <post-lists v-else v-for="post in posts.data" :key="post.data.post_id" :post="post"></post-lists>
 
     <scroll-top></scroll-top>
   </div>
@@ -101,40 +101,28 @@ export default {
     return {
       modal1: false,
       itemNameText: "",
-      error: null
+      error: null,
+      posts: null
     };
   },
 
   mounted() {
-    this.$store.dispatch("fetchNewsPosts");
+    axios
+      .get("/api/posts")
+      .then(res => {
+        this.posts = res.data;
+      })
+      .catch(error => {
+        console.log("Unable to fetch posts");
+      });
   },
 
-  computed: {
-    ...mapGetters({
-      posts: "posts",
-      newsStatus: "newsStatus"
-    })
-  },
   methods: {
     openModal1() {
       this.modal1 = true;
     },
     closeModal1() {
       this.modal1 = false;
-    },
-    add(event) {
-      axios
-        .post("/api/posts/store", { item_name: this.itemNameText })
-        .then(res => {
-          if (res.data.stats == 0) {
-            this.$router.push({
-              path: "/",
-              query: { message: res.data.message }
-            });
-          } else {
-            this.error = res.data.message.item_name.join("<br>");
-          }
-        });
     }
   }
 };
@@ -186,6 +174,10 @@ export default {
     h2 {
       border-bottom: 1px solid $gray;
     }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
   }
   .close-btn {
     position: absolute;
@@ -205,6 +197,9 @@ export default {
   textarea {
     background: $white !important;
     height: 300px;
+    @media screen and (max-width: 768px) {
+      height: 400px;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="block md:hidden">
+  <div class="block lg:hidden">
     <input id="drawer-checkbox" type="checkbox" />
     <label id="drawer-icon" for="drawer-checkbox">
       <span class="navbar-burger burger" data-target="navbarMenu">
