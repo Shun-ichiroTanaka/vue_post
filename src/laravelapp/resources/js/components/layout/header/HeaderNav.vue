@@ -4,9 +4,9 @@
     <nav class="navbar">
       <div class="container h-full">
         <div class="navbar-brand h-full justify-between px-4">
-          <a class="navbar-item" href="/">
+          <router-link class="navbar-item" to="/">
             <img :src="logo" alt="Logo" />
-          </a>
+          </router-link>
 
           <!-- スマホメニュー -->
           <sp-drawer></sp-drawer>
@@ -47,7 +47,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../../../../sass/_variables.scss";
 nav.navbar {
   top: 0;
   position: fixed !important;
@@ -57,9 +56,5 @@ nav.navbar {
 }
 .navbar-brand {
   align-items: center !important;
-}
-.dark nav.navbar {
-  background: $secondary-black;
-  box-shadow: 0 0 1px 0 rgb(255, 255, 255, 0.8);
 }
 </style>
