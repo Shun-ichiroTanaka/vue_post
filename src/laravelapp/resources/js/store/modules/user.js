@@ -19,7 +19,7 @@ const actions = {
                 commit('setAuthUser', res.data);
             })
             .catch(error => {
-                console.log('認証ユーザーを取得できません');
+                console.log('Vuexのuser.jsでは認証ユーザーを取得できません');
             });
     }
 };

@@ -28093,6 +28093,30 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
+body {
+  background: #f0f2f6;
+  box-sizing: border-box !important;
+  clear: both !important;
+}
+
+.dark {
+  background: #181a1b;
+  color: #f8fafc;
+}
+
+.dark a {
+  color: #1b76f2;
+}
+
+.dark strong {
+  color: #f8fafc;
+}
+
+.dark nav.navbar {
+  background: #242627;
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
 .btn:hover {
   background: #f0f2f6;
 }
