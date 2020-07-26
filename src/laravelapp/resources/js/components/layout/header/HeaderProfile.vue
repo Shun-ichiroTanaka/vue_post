@@ -37,9 +37,7 @@
                 </div>
                 <div class="flex flex-col">
                   Your Name
-                  <div class="text-xs font-normal inline-flex items-center">
-                    <router-link :to="'/users/' + user.data.user_id" class>自分のプロフィールを見る</router-link>
-                  </div>
+                  <div class="text-xs font-normal inline-flex items-center">自分のプロフィールを見る</div>
                 </div>
               </div>
             </div>
@@ -67,7 +65,6 @@
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
 import Toggle from "../../../components/object/button/Toggle";
 import { LogOutIcon } from "vue-feather-icons";
 import { SettingsIcon } from "vue-feather-icons";
@@ -77,8 +74,7 @@ export default {
 
   data() {
     return {
-      show: false,
-      user: null
+      show: false
     };
   },
   components: {
@@ -94,21 +90,6 @@ export default {
     mouseleave() {
       this.show = false;
     }
-  },
-  mounted() {
-    axios
-      .get("/api/auth-user")
-      .then(res => {
-        this.user = res.data;
-      })
-      .catch(error => {
-        console.log("認証ユーザーを取得できません");
-      });
-  },
-  computed: {
-    ...mapGetters({
-      authUser: "authUser"
-    })
   }
 };
 </script>
